@@ -25,7 +25,7 @@ contract VendorPt3 {
     emit Purchase(msg.sender, itemName);
   }
 
-  function addItem(string itemName, uint itemCount) {
+  function addItem(string itemName, uint8 itemCount) {
     require(msg.sender == storeOwner);
     inventory[itemName] = Item(itemName, itemCount);
   }
