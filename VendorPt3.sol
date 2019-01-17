@@ -14,7 +14,7 @@ contract VendorPt2 {
   }
 
   modifier inStock(string itemName) {
-    return inventory[itemName].count > 0;
+    require(inventory[itemName].count > 0);
     _;
   }
 
