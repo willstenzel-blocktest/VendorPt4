@@ -1,8 +1,8 @@
 pragma solidity 0.4.25;
 
-import "./VendorPt2.sol";
+import "./VendorPt3.sol";
 
-contract TestVendorPt2 is VendorPt2 {
+contract TestVendorPt3 is VendorPt3 {
 
   function test_AddItem() {
     assert(getItemCount("Hats") == 0);
