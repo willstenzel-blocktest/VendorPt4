@@ -1,4 +1,4 @@
-contract VendorPt2 {
+contract VendorPt3 {
   struct Item {
     string name;
     uint count;
