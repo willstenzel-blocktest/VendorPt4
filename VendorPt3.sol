@@ -1,3 +1,5 @@
+pragma solidity 0.4.25;
+
 contract VendorPt3 {
   struct Item {
     string name;
