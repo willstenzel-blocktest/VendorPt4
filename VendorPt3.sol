@@ -1,9 +1,7 @@
-pragma solidity 0.4.25;
-
 contract VendorPt3 {
   struct Item {
     string name;
-    uint8 count;
+    uint count;
   }
 
   address storeOwner;
@@ -25,7 +23,7 @@ contract VendorPt3 {
     emit Purchase(msg.sender, itemName);
   }
 
-  function addItem(string itemName, uint8 itemCount) {
+  function addItem(string itemName, uint itemCount) {
     require(msg.sender == storeOwner);
     inventory[itemName] = Item(itemName, itemCount);
   }
