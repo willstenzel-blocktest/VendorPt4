@@ -20,7 +20,7 @@ contract VendorPt3 {
     _;
   }
 
-  function purchaseItem(string itemName) public external inStock(itemName) {
+  function purchaseItem(string itemName) external inStock(itemName) {
     inventory[itemName].count--;
     emit Purchase(msg.sender, itemName);
   }
@@ -30,7 +30,7 @@ contract VendorPt3 {
     inventory[itemName] = Item(itemName, itemCount);
   }
 
-  function getItemCount(string itemName) view public external returns (uint count) {
+  function getItemCount(string itemName) view external returns (uint count) {
     return inventory[itemName].count;
   }
 }
