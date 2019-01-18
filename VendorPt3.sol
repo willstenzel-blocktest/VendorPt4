@@ -20,17 +20,17 @@ contract VendorPt3 {
     _;
   }
 
-  function purchaseItem(string itemName) public inStock(itemName) {
+  function purchaseItem(string itemName) public external inStock(itemName) {
     inventory[itemName].count--;
     emit Purchase(msg.sender, itemName);
   }
 
-  function addItem(string itemName, uint itemCount) {
+  function addItem(string itemName, uint itemCount) external {
     require(msg.sender == storeOwner);
     inventory[itemName] = Item(itemName, itemCount);
   }
 
-  function getItemCount(string itemName) view public returns (uint count) {
+  function getItemCount(string itemName) view public external returns (uint count) {
     return inventory[itemName].count;
   }
 }
