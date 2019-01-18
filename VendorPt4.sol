@@ -1,6 +1,6 @@
 pragma solidity 0.4.25;
 
-contract VendorPt3 {
+contract VendorPt4 {
   struct Item {
     string name;
     uint count;
