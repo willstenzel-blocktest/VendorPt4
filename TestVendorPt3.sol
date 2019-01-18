@@ -1,12 +1,12 @@
 pragma solidity 0.4.25;
 
-import "./VendorPt3.sol";
+import "./VendorPt4.sol";
 
-contract TestVendorPt3 {
+contract TestVendorPt4 {
 
-  VendorPt3 vendor = new VendorPt3();
+  VendorPt4 vendor = new VendorPt4();
   
-  function test_AddItem() {
+  function test_AddItem() external {
     assert(vendor.getItemCount("Hats") == 0);
     vendor.addItem("Hats", 15);
     assert(vendor.getItemCount("Hats") == 15);
@@ -16,7 +16,7 @@ contract TestVendorPt3 {
     assert(vendor.getItemCount("Scarves") == 20);
   }
 
-  function test_PurchaseItem() {
+  function test_PurchaseItem() external {
     vendor.addItem("Watches", 5);
     vendor.addItem("Sunglasses", 40);
     vendor.addItem("Water Bottles", 18);
